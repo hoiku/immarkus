@@ -6,6 +6,7 @@ import macros from 'vite-plugin-babel-macros';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
+  base: '/immarkus/', 
   plugins: [
     react(), 
     macros(),
