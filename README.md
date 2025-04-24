@@ -39,7 +39,7 @@ __Wiki__
 Hilde De Weerdt, Rainer Simon, Lee Sunkyu, Iva Stojević, Dawn Zhuang. Image Annotation in
 IMMARKUS Wiki. 2024-. https://github.com/rsimon/immarkus/wiki.
 ```
-
+ 
 ## Installation
 
 - Clone this repository
