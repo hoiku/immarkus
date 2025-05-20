@@ -3,14 +3,32 @@ import { AppNavigationSidebar } from './components/AppNavigationSidebar';
 import { About, Annotate, Export, KnowledgeGraph, Images, Markus, Start, Vocabulary } from './pages';
 import { useStore } from './store';
 
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './App.css';
 
-export const App = () => {
+export const App = () => { 
 
   const store = useStore();
 
   const { pathname } = useLocation();
   
+  
+  // 삽입코
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const image = params.get('image'); // 예: default/seo021867-000-002.jpg
+    const annotations = params.get('annotations'); // 예: default/annotation.js
+
+    if (image && annotations) {
+      const encoded = encodeURIComponent(image);
+      navigate(`/annotate/${encoded}`, { replace: true });
+    }
+  }, []);
+
   return store ? (
     <Routes>
       <Route path="/">
