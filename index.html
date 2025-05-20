@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMMARKUS</title>
+    <script>
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+
+  // URL 파라미터가 없을 경우 자동으로 image와 annotations 붙이기
+  if (!params.has('image') && !params.has('annotations')) {
+    const redirectUrl = `${window.location.origin}${window.location.pathname}?image=seo021867-000-002.jpg&annotations=annotation.js`;
+    window.location.replace(redirectUrl);
+  }
+</script>
   </head>
   <body>
     <div id="app"></div>
