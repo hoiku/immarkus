@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMMARKUS</title>
-    <script type="module" crossorigin src="/immarkus/assets/immarkus-DknkN1bj.js"></script>
+    <script>
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+
+  // URL 파라미터가 없을 경우 자동으로 image와 annotations 붙이기
+  if (!params.has('image') && !params.has('annotations')) {
+    const redirectUrl = `${window.location.origin}${window.location.pathname}?image=seo021867-000-002.jpg&annotations=annotation.js`;
+    window.location.replace(redirectUrl);
+  }
+</script>
+    <script type="module" crossorigin src="/immarkus/assets/immarkus-QQe-znvv.js"></script>
     <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-annotorious-T9F6SwhF.js">
     <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-exceljs-sOghH7AH.js">
     <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-sam-BekPZ5cd.js">
-    <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-primereact-Ctpv30IG.js">
+    <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-primereact-fkyG7FM7.js">
     <link rel="modulepreload" crossorigin href="/immarkus/assets/dep-opencv-BhNCVrOG.js">
     <link rel="stylesheet" crossorigin href="/immarkus/assets/immarkus-BgdLBWnT.css">
   </head>
