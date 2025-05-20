@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMMARKUS</title>
     <script>
-  const url = new URL(window.location.href);
-  const params = url.searchParams;
-
-  // URL 파라미터가 없을 경우 자동으로 image와 annotations 붙이기
-  if (!params.has('image') && !params.has('annotations')) {
-    const redirectUrl = `${window.location.origin}${window.location.pathname}?image=seo021867-000-002.jpg&annotations=annotation.js`;
-    window.location.replace(redirectUrl);
+  if (window.location.search.indexOf('image=') === -1 && window.location.search.indexOf('annotations=') === -1) {
+    window.location.href = window.location.origin + window.location.pathname + '?image=default/seo021867-000-002.jpg&annotations=default/annotation.js';
   }
 </script>
   </head>
