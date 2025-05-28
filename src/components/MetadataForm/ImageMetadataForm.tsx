@@ -33,6 +33,20 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
 
   
   return (
+
+
+    // 삽입코드
+
+    <>
+      {/* 👇 ③ 내 입력창 먼저 렌더링 */}
+      <AnnotationMetaField 
+        metadata={metadata.properties || {}} 
+        setMetadata={handleCustomChange} 
+      />
+
+
+
+    
     <MetadataForm 
       metadata={metadata}
       schemas={model.imageSchemas} 
