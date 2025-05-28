@@ -1,7 +1,7 @@
 import { W3CAnnotationBody } from '@annotorious/react';
 import { useDataModel } from '@/store';
 import { MetadataForm } from './MetadataForm';
-import { AnnotationMetaField } from '@/components/PropertyFields/hhAnnotationMetaField';
+import { AnnotationMetaField } from '@/components/PropertyFields/hhAnnotationMetaField'; //hhcd
 
 
 interface ImageMetadataFormProps {
@@ -19,7 +19,7 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
   const model = useDataModel();
 
 
-  // 👇 ② 입력값이 변경될 때 properties에 반영하는 함수 정의
+  // hh코드시작
   const handleCustomChange = (value: any) => {
     onChange({ 
       ...metadata, 
@@ -38,7 +38,7 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
     // 삽입코드
 
     <>
-      {/* 👇 ③ 내 입력창 먼저 렌더링 */}
+      {/* hhcd */}
       <AnnotationMetaField 
         metadata={metadata.properties || {}} 
         setMetadata={handleCustomChange} 
