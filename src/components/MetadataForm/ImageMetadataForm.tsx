@@ -35,8 +35,7 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
   return (
 
 
-    // 삽입코드
-
+    
     <>
       {/* hhcd */}
       <AnnotationMetaField 
