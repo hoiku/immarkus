@@ -51,6 +51,8 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
       metadata={metadata}
       schemas={model.imageSchemas} 
       onChange={props.onChange} />
+
+      </>
   )
 
 }
