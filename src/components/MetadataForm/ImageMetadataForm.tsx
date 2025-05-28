@@ -38,10 +38,12 @@ export const ImageMetadataForm = (props: ImageMetadataFormProps) => {
     
     <>
       {/* hhcd */}
-      <AnnotationMetaField 
-        metadata={metadata.properties || {}} 
-        setMetadata={handleCustomChange} 
-      />
+      {metadata?.properties && (
+        <AnnotationMetaField 
+          metadata={metadata.properties} 
+          setMetadata={handleCustomChange}
+        />
+      )}
 
 
 
